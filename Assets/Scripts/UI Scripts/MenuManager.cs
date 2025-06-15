@@ -7,6 +7,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject painelControles;
     [SerializeField] private GameObject painelHighscore;
     [SerializeField] private GameObject painelHUD;
+    [SerializeField] private GameObject painelGameOver;
 
     public void Jogar()
     {
@@ -39,6 +40,11 @@ public class MenuManager : MonoBehaviour
         painelHUD.SetActive(false);
         painelMenu.SetActive(false);
         painelHighscore.SetActive(true);
+    }
+    public void GameOver()
+    {
+        painelHUD.SetActive(false);
+        painelGameOver.SetActive(true);
     }
     public void Sair()
     {
